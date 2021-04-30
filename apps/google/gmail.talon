@@ -5,7 +5,7 @@ title: /https\:\/\/mail\.google\.com\/mail\/u\//
 -
 settings():
     # milliseconds
-    key_wait = 100
+    key_wait = 25
 
 # while in a thread
 done:
