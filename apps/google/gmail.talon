@@ -1,9 +1,12 @@
-#os: windows
-#app: chrome
 tag: browser
-title: /Gmail/
+# requires https://github.com/erichgoldman/add-url-to-window-title chrome extension
+title: /https\:\/\/mail\.google\.com\/mail\/u\//
 
 -
+settings():
+    # milliseconds
+    key_wait = 100
+
 # while in a thread
 done:
     key([)
@@ -29,16 +32,20 @@ todo:
     key(k)
 later:
     key(b)
+    #sleep(100ms)
     key(down)
 later today:
 # todo: bugs out after hours. Need to account for this.
     key(b)
     key(down)
-    key(enter)
 later tomorrow:
     # todo: bugs out after hours. Need to account for this.
     key(b)
     key(down)
     key(down)
-    key(enter)
-    
+later next week:
+    # todo: bugs out after hours. Need to account for this.
+    key(b)
+    key(down)
+    key(down)
+    key(down)
