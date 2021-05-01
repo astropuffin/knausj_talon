@@ -20,12 +20,12 @@ archive:
 go top:
     key(up: 100)
 # sidebars
-inbox:
+go inbox:
     key(esc)
     key(esc)
     key(g)
     key(i)
-todo:
+go todo:
     key(esc)
     key(esc)
     key(g)
@@ -49,3 +49,15 @@ later next week:
     key(down)
     key(down)
     key(down)
+panel side:
+    key(ctrl-alt-.)
+panel main:
+    key(ctrl-alt-,)
+discard:
+    key(ctrl-shift-d)
+send message:
+    key(ctrl-enter)
+undo:
+    key(z)
+expand:
+    key(;)
