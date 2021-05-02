@@ -1,6 +1,6 @@
 tag: browser
 # requires https://github.com/erichgoldman/add-url-to-window-title chrome extension
-title: /https\:\/\/mail\.google\.com\/mail\/u\//
+title: /mail\.google\.com\//
 
 -
 settings():
