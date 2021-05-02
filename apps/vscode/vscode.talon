@@ -66,6 +66,14 @@ file move:
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
+file delete: user.vscode("fileutils.removeFile")
+
+# folder commands
+# https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils
+folder new: user.vscode("fileutils.newFolder")
+folder new root: user.vscode("fileutils.newFolderAtRoot")
+folder explore: user.vscode("File: Reveal in Explorer")
+folder sidebar: user.vscode("File: Reveal Active File In Side Bar")
 
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")
@@ -93,6 +101,7 @@ refactor this: user.vscode("editor.action.refactor")
 go back: user.vscode("workbench.action.navigateBack")
 go forward: user.vscode("workbench.action.navigateForward")
 go implementation: user.vscode("editor.action.goToImplementation")
+go recent: user.vscode("File: Open Recent")
 go type: user.vscode("editor.action.goToTypeDefinition")
 go usage: user.vscode("references-view.find")
 go recent [<user.text>]:
@@ -164,6 +173,7 @@ debug console: user.vscode("workbench.debug.action.toggleRepl")
 
 # Terminal
 terminal external: user.vscode("workbench.action.terminal.openNativeConsole")
+terminal focus: user.vscode("workbench.action.terminal.focus")
 terminal new: user.vscode("workbench.action.terminal.new")
 terminal next: user.vscode("workbench.action.terminal.focusNext")
 terminal last: user.vscode("workbench.action.terminal.focusPrevious")
