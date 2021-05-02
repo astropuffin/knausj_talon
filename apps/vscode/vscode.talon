@@ -87,16 +87,24 @@ file hunt [<user.text>]:
   user.vscode("Go to File")
   sleep(50ms)
   insert(text or "")
-file copy path: user.vscode_ignore_clipboard("File: Copy Path of Active File") 
-file create sibling: user.vscode("File: New File")  
-file create: user.vscode("File: New Untitled File")
-file open folder: user.vscode("File: Reveal in File Explorer")
-#todo: rename isn't working.
-#file rename active: 
-#  user.vscode("File: Reveal Active File In Side Bar")
-#  user.vscode("renameFile")
-#file rename: user.vscode("renameFile")
-file reveal: user.vscode("File: Reveal Active File In Side Bar") 
+file copy path: user.vscode_ignore_clipboard("File: Copy Path of Active File")
+file create anon: user.vscode("File: New Untitled File")
+# this doesn't actually work as is, it's identical to Untitled File.
+# file create sibling: user.vscode("File: New File")
+# https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils
+# working version, but required an extension.
+file create sibling: user.vscode("fileutils.newFile")
+file create root: user.vscode("fileutils.newFileAtRoot")
+file rename: user.vscode("fileutils.renameFile")
+file move: user.vscode("fileutils.moveFile")
+file delete: user.vscode("fileutils.removeFile")
+
+# folder commands
+# https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils
+folder new: user.vscode("fileutils.newFolder")
+folder new root: user.vscode("fileutils.newFolderAtRoot")
+folder explore: user.vscode("File: Reveal in Explorer")
+folder sidebar: user.vscode("File: Reveal Active File In Side Bar")
 
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")
@@ -122,7 +130,7 @@ refactor this: user.vscode("editor.action.refactor")
 #code navigation
 (go declaration | follow): user.vscode("Go to Declaration")
 go back: user.vscode("workbench.action.navigateBack") 
-go forward:  user.vscode("workbench.action.navigateForward")  
+go forward:  user.vscode("workbench.action.navigateForward")
 go implementation: user.vscode("Go to Implementation")
 go recent: user.vscode("File: Open Recent")
 go type: user.vscode("editor.action.goToTypeDefinition")
@@ -180,6 +188,7 @@ debug restart: user.vscode("workbench.action.debug.restart")
 
 # Terminal
 terminal external: user.vscode("workbench.action.terminal.openNativeConsole")
+terminal focus: user.vscode("workbench.action.terminal.focus")
 terminal new: user.vscode("workbench.action.terminal.new")
 terminal next: user.vscode("workbench.action.terminal.focusNextPane")
 terminal last:user.vscode("workbench.action.terminal.focusPreviousPane")
