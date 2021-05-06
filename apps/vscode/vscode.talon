@@ -69,6 +69,7 @@ panel output: user.vscode("workbench.panel.output.focus")
 panel problems: user.vscode("workbench.panel.markers.view.focus")
 panel switch: user.vscode("workbench.action.togglePanel")
 panel terminal: user.vscode("workbench.panel.terminal.focus")
+manual command: key(ctrl-shift-p)
 
 # Settings
 show settings: user.vscode("workbench.action.openGlobalSettings")
@@ -93,7 +94,7 @@ file create anon: user.vscode("File: New Untitled File")
 # file create sibling: user.vscode("File: New File")
 # https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils
 # working version, but required an extension.
-file create sibling: user.vscode("fileutils.newFile")
+file create: user.vscode("fileutils.newFile")
 file create root: user.vscode("fileutils.newFileAtRoot")
 file rename: user.vscode("fileutils.renameFile")
 file move: user.vscode("fileutils.moveFile")
@@ -205,4 +206,6 @@ copy line up: user.vscode("editor.action.copyLinesUpAction")
 select less: user.vscode("editor.action.smartSelect.shrink")
 select (more|this): user.vscode("editor.action.smartSelect.expand")
   
-  
+# polacode
+# https://marketplace.visualstudio.com/items?itemName=pnp.polacode
+polar code: user.vscode("Polacode")
