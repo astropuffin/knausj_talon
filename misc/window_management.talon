@@ -19,3 +19,6 @@ focus one password:
     user.switcher_focus("1password")
 focus code:
     user.switcher_focus("visual studio code")
+
+focus unity:
+    user.switcher_focus("Unity.exe")
