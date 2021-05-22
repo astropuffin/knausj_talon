@@ -108,6 +108,7 @@ folder explore: user.vscode("File: Reveal in Explorer")
 folder sidebar: user.vscode("File: Reveal Active File In Side Bar")
 
 # Language Features
+show fix: key(ctrl-.)
 suggest show: user.vscode("editor.action.triggerSuggest")
 hint show: user.vscode("editor.action.triggerParameterHints")
 definition show: user.vscode("editor.action.revealDefinition")
