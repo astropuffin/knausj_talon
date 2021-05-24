@@ -1,8 +1,5 @@
 os: mac
-
-#i don't see a need to restrict the app here, this just defines the actions
-#each app can support appropriate voice commands as needed
-#the below are for 1password, redefine as needed
+app: 1Password.exe
 -
 action(user.password_fill):
 	key(cmd-\)
@@ -22,3 +19,11 @@ action(user.password_edit):
 action(user.password_delete):
 	key(cmd-backspace)
 
+action(user.username_copy):
+	key(ctrl-cmd-c)
+
+action(user.password_copy):
+	key(shift-cmd-c)
+
+action(user.otp_copy):
+	key(shift-ctrl-cmd-c)

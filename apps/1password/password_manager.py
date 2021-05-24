@@ -27,3 +27,12 @@ class Actions:
 
     def password_delete():
         """Delete password"""
+
+    def username_copy():
+        """Copy username"""
+
+    def password_copy():
+        """Copy password"""
+
+    def otp_copy():
+        """Copy OTP code"""
