@@ -98,17 +98,30 @@ file hunt [<user.text>]:
 file copy path: user.vscode("copyFilePath") 
 file create sibling: user.vscode_and_wait("explorer.newFile")
 file create: user.vscode("workbench.action.files.newUntitledFile")
+# https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils
+# working version, but required an extension.
+file create: user.vscode("fileutils.newFile")
+file create root: user.vscode("fileutils.newFileAtRoot")
 file rename:
 	user.vscode("fileutils.renameFile")
 	sleep(150ms)
 file move:
 	user.vscode("fileutils.moveFile")
 	sleep(150ms)
+file delete: user.vscode("fileutils.removeFile")
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer") 
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
 
+# folder commands
+# https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils
+folder new: user.vscode("fileutils.newFolder")
+folder new root: user.vscode("fileutils.newFolderAtRoot")
+folder explore: user.vscode("File: Reveal in Explorer")
+folder sidebar: user.vscode("File: Reveal Active File In Side Bar")
+
 # Language Features
+show fix: key(ctrl-.)
 suggest show: user.vscode("editor.action.triggerSuggest")
 hint show: user.vscode("editor.action.triggerParameterHints")
 definition show: user.vscode("editor.action.revealDefinition")
@@ -134,6 +147,7 @@ refactor this: user.vscode("editor.action.refactor")
 go back: user.vscode("workbench.action.navigateBack") 
 go forward:  user.vscode("workbench.action.navigateForward")  
 go implementation: user.vscode("editor.action.goToImplementation")
+go recent: user.vscode("File: Open Recent")
 go type: user.vscode("editor.action.goToTypeDefinition")
 go usage: user.vscode("references-view.find")
 go recent [<user.text>]: 
@@ -205,6 +219,7 @@ debug console: user.vscode("workbench.debug.action.toggleRepl")
 
 # Terminal
 terminal external: user.vscode("workbench.action.terminal.openNativeConsole")
+terminal focus: user.vscode("workbench.action.terminal.focus")
 terminal new: user.vscode("workbench.action.terminal.new")
 terminal next: user.vscode("workbench.action.terminal.focusNext")
 terminal last:user.vscode("workbench.action.terminal.focusPrevious")
@@ -250,3 +265,7 @@ cell run above: user.vscode("jupyter.runallcellsabove.palette")
 cell run: user.vscode("jupyter.runcurrentcell")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
+  
+# polacode
+# https://marketplace.visualstudio.com/items?itemName=pnp.polacode
+polar code: user.vscode("Polacode")

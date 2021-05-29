@@ -1,8 +1,5 @@
 os: windows
-
-#i don't see a need to restrict the app here, this just defines the actions
-#each app can support appropriate voice commands as needed
-#the below are for 1password, redefine as needed
+app: 1Password.exe
 -
 action(user.password_fill):
 	key(ctrl-\\)
@@ -22,3 +19,20 @@ action(user.password_edit):
 action(user.password_delete):
 	key(ctrl-delete)
 
+action(user.username_copy):
+	key(ctrl-shift-c)
+	key(down)
+	key(enter)
+
+action(user.password_copy):
+	key(ctrl-shift-c)
+	key(down)
+	key(down)
+	key(enter)
+
+action(user.otp_copy):
+	key(ctrl-shift-c)
+	key(down)
+	key(down)
+	key(down)
+	key(enter)
