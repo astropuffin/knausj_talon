@@ -130,7 +130,7 @@ refactor rename: user.vscode("editor.action.rename")
 refactor this: user.vscode("editor.action.refactor")
 
 #code navigation
-(go declaration | follow): user.vscode("Go to Declaration")
+(go definition | follow): user.vscode("Go to Definition")
 go back: user.vscode("workbench.action.navigateBack") 
 go forward:  user.vscode("workbench.action.navigateForward")
 go implementation: user.vscode("Go to Implementation")
