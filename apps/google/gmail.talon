@@ -5,7 +5,7 @@ title: /mail\.google\.com\//
 -
 settings():
     # milliseconds
-    key_wait = 25
+    key_wait = 10
 
 # while in a thread
 done:
