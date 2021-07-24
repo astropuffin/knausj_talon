@@ -194,7 +194,6 @@ copy line up: user.vscode("editor.action.copyLinesUpAction")
 #Expand/Shrink AST Selection
 select less: user.vscode("editor.action.smartSelect.shrink")
 select (more|this): user.vscode("editor.action.smartSelect.expand")
-<<<<<<< HEAD
 
 minimap: user.vscode("editor.action.toggleMinimap")
 maximize: user.vscode("workbench.action.minimizeOtherEditors")
