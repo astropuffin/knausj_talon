@@ -1,6 +1,6 @@
-app.name: zoom
-os: osx
-
+app: zoom.us
+os: mac
+-
 mute:
     key(cmd-shift-a)
     speech.disable()
