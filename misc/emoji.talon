@@ -1,3 +1,5 @@
 smiley: ":)"
 frown: ":("
 smirk: ":/"
+rocket: ":rocket:"
+looks good to me: "LGTM"
