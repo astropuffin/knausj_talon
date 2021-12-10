@@ -9,6 +9,6 @@ settings():
 password copy:
     key(ctrl-shift-c)
 user name copy:
-    // none
+    # none
 one time copy:
     key(ctrl-alt-c)
