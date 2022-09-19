@@ -1,6 +1,7 @@
 tag: browser
 # requires https://github.com/erichgoldman/add-url-to-window-title chrome extension
-title: /mail\.google\.com\//
+title: /Inbox \(\d+\) \- .+\@.* \-.*/
+app.bundle: com.google.Chrome
 
 -
 settings():
@@ -17,6 +18,8 @@ mark:
     key(x)
 archive:
     key(e)
+spam:
+    key(!)
 go top:
     key(up: 100)
 # sidebars
