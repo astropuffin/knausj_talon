@@ -1,6 +1,5 @@
 tag: browser
 # requires https://github.com/erichgoldman/add-url-to-window-title chrome extension
-title: /Inbox \(\d+\) \- .+\@.* \-.*/
 app.bundle: com.google.Chrome
 
 -
