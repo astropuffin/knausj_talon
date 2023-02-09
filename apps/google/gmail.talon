@@ -12,6 +12,8 @@ done:
     key([)
 skip:
     key(j)
+span:
+    key(!)
 # selecting threads
 mark:
     key(x)
